@@ -4,7 +4,7 @@ import { Header } from './components'
 
 <template>
   <Header />
-  <div class="ml-[300px] p-2 content">
+  <div class="ml-[300px] p-2 content bg-gray-100 min-h-[100vh]">
     <router-view></router-view>
   </div>
 </template>

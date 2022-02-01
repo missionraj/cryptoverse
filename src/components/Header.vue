@@ -6,7 +6,7 @@
         <div class="flex p-2">
             <img src="@/assets/cryptocurrency.png" alt="crypto" height="40" width="40" />
             <span class="text-white text-2rem ml-1">Crypto Verse</span>
-            <span class="ml-auto" @click.prevent="toggle = false">
+            <span class="ml-auto tablet:hidden" @click.prevent="toggle = false">
                 <CloseThick class="close" />
             </span>
         </div>
@@ -48,7 +48,6 @@
         <span @click.prevent="toggle = true">
             <Menu />
         </span>
-        <div v-if="toggle">toggle is clicked ....</div>
     </div>
 </template>
 <script setup lang="ts">
@@ -87,7 +86,7 @@ watch(() => route.currentRoute.value, () => {
 @media only screen and (max-width: 600px) {
     .sidebar {
         width: 0;
-        transition: width 2s linear 0.5s;
+        transition: width 0.3s linear 0.5s;
     }
 
     .head {

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@types/node": "^17.0.12",
+    "axios": "^0.25.0",
     "vue": "^3.2.25",
     "vue-material-design-icons": "^5.0.0",
     "vue-router": "^4.0.12"
