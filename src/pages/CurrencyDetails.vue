@@ -9,6 +9,29 @@
     <div style="display: flex;flex-direction:column;">
         <vue3-chart-js v-bind="{ ...lineChart }" />
     </div>
+    <div class="grid grid-cols-2 gap-2 mt-4">
+        <div>
+            <p class="text-4xl text-blue-600 font-bold">{{ data.data.coin.name }} Value Statics</p>
+            <p>An overview showing the statistics of {{ data.data.coin.name }} , such as the base and quote currency, the rank, and trading volume.</p>
+        </div>
+        <div>
+            <p class="text-4xl text-blue-600 font-bold">Other Stats Info</p>
+            <p>An overview showing the statistics of {{ data.data.coin.name }} , such as the base and quote currency, the rank, and trading volume.</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-2 mt-4">
+        <div>
+            <p class="text-4xl text-blue-600 font-bold">What is {{ data.data.coin.name }}</p>
+            <span v-html="data.data.coin.description"></span>
+        </div>
+        <div>
+            <p class="text-4xl text-blue-600 font-bold">{{ data.data.coin.name }} Links</p>
+            <p v-for="(link) in data.data.coin.links" class="flex mb-2">
+                <span class="flex-1">{{ link.type }}</span>
+                <a :href="link.url" target="_blank" class="text-violet-600">{{ link.name }}</a>
+            </p>
+        </div>
+    </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
@@ -1345,4 +1368,8 @@ const lineChart = {
 };
 
 </script>
-<style scoped></style>
+<style scoped>
+h3 {
+    font-size: 30px;
+}
+</style>

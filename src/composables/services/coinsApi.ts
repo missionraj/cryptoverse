@@ -1,4 +1,4 @@
-import { httpcryptocurrencies } from "../../httpCommon";
+import { httpcryptocurrencies, httpbingnews } from "../../httpCommon";
 
 class CoinsApi  { 
     get(queryParams: any) : Promise<any> { 
@@ -11,6 +11,10 @@ class CoinsApi  {
 
     getCoinsPriceHistory(currecnyId: string, queryParams: any) : Promise<any>{
         return  httpcryptocurrencies.get(`/coin/${currecnyId}/history`, { params : queryParams})
+    }
+
+    getCoinsNews(queryparams: any) :Promise<any> { 
+        return httpbingnews.get(`/search`,{ params: queryparams});
     }
 }
 

@@ -35,3 +35,31 @@ export interface Stats {
     totalMarketCap: string;
     total24hVolume: string;
 }
+
+
+export interface News {
+    _type:         string;
+    name:          string;
+    url:           string;
+    image:         Image;
+    description:   string;
+    provider:      Provider[];
+    datePublished: Date;
+}
+
+export interface Image {
+    _type:     string;
+    thumbnail: Thumbnail;
+}
+
+export interface Thumbnail {
+    _type:      string;
+    contentUrl: string;
+    width:      number;
+    height:     number;
+}
+
+export interface Provider {
+    _type: string;
+    name:  string;
+}
