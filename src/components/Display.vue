@@ -29,7 +29,7 @@
 
 import { ref, onMounted } from "vue";
 import CoinsApi from "../composables/services/coinsApi";
-import { Coins, Stats } from "../types.d"
+import { Stats } from "../types.d"
 
 const queryParams = {
     referenceCurrencyUuid: 'yhjMzLPhuIDl',
@@ -44,11 +44,11 @@ const queryParams = {
 const data = ref(<Stats>{})
 
 onMounted(() => {
-    CoinsApi.get(queryParams).then((res) => {
-        data.value = res.data.data.stats
-        console.log('data value ....', res.data.data.stats);
-    })
+    // CoinsApi.get(queryParams).then((res) => {
+    //     data.value = res.data.data.stats
+    //     console.log('data value ....', res.data.data.stats);
+    // })
 })
 
 </script>
-<style ></style>
+<style scoped></style>

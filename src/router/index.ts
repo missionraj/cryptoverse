@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory} from "vue-router"
-import { CryptoCurrencies, Exchanges, Home, News } from "../pages"
+import { CryptoCurrencies, Exchanges, Home, News, CurrenyDetails } from "../pages"
 
 const routes = [
     { 
@@ -11,6 +11,11 @@ const routes = [
         path: '/currencies', 
         name:'currency',
         component: CryptoCurrencies 
+    },
+    { 
+        path: '/crypto/:id', 
+        name:'currencydetail',
+        component: CurrenyDetails 
     },
     { 
         path: '/exchanges', 

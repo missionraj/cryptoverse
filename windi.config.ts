@@ -7,8 +7,7 @@ export default {
       },
       extend: {
         fontFamily: {
-          'sans':[ 'Oswald', 'sans-serif', 'Roboto']
-
+          'sans':[ 'Roboto', 'Oswald']
         }
       }
     },
